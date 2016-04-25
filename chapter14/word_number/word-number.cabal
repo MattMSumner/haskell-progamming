@@ -1,0 +1,26 @@
+name:                word-number
+version:             0.1.0.0
+license:             MIT
+license-file:        LICENSE
+author:              Matt
+category:            Text
+build-type:          Simple
+cabal-version:       >=1.10
+
+library
+  exposed-modules:     WordNumber
+  ghc-options:         -Wall -fwarn-tabs
+  build-depends:       base >=4.8 && <4.9
+  hs-source-dirs:      src
+  default-language:    Haskell2010
+
+test-suite tests
+  ghc-options:         -Wall -fno-warn-orphans
+  type:                exitcode-stdio-1.0
+  main-is:             word_number_test.hs
+  hs-source-dirs:      tests
+  build-depends:       base
+                     , word-number
+                     , QuickCheck
+                     , hspec
+  default-language:    Haskell2010
